@@ -43,6 +43,7 @@ body {
   height: 2em;
   border-radius: 20px;
   background-color: #ada6a6;
+  border: none;
 }
 
 .buttons {
