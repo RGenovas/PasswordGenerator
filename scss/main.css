@@ -4,11 +4,12 @@ body {
   padding: 0;
   font-family: "Open sans", sans-serif;
   color: #fff;
-  background-color: #666060;
+  background: linear-gradient(to right, rgba(102, 96, 96, 0.9), rgba(102, 96, 96, 0.6));
 }
 
 .header {
   text-align: center;
+  font-size: 1em;
 }
 
 .guide {
@@ -17,13 +18,14 @@ body {
 
 .generator {
   margin: 0 auto;
+  margin-bottom: 3em;
   padding: 1em;
   height: 70vh;
   width: 80%;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #666060;
+  background: linear-gradient(to right, rgba(102, 96, 96, 0.9), rgba(102, 96, 96, 0.6));
   flex-direction: column;
   border-radius: 20px;
   border: 2px solid #ccbfbf;
@@ -37,6 +39,7 @@ body {
 }
 .generator_field {
   width: 25vh;
+  height: 2em;
   border-radius: 20px;
   background-color: #ada6a6;
 }
@@ -84,4 +87,23 @@ body {
   border-radius: 50%;
   background-color: #131212;
   cursor: pointer;
+}
+
+.bottom {
+  margin: 0 auto;
+  width: 80%;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-top: 1px solid #fff;
+  gap: 1em;
+}
+.bottom_link {
+  text-decoration: none;
+}
+.bottom_link_icon:hover {
+  color: #050505;
+  position: relative;
+  top: 1px;
 }/*# sourceMappingURL=main.css.map */
