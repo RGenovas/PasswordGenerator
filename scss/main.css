@@ -18,7 +18,7 @@ body {
 .generator {
   margin: 0 auto;
   padding: 1em;
-  height: 60vh;
+  height: 70vh;
   width: 80%;
   display: flex;
   align-items: center;
@@ -34,6 +34,11 @@ body {
   border: 1px solid #332f2f;
   border-radius: 10px;
   text-align: center;
+}
+.generator_field {
+  width: 25vh;
+  border-radius: 20px;
+  background-color: #ada6a6;
 }
 
 .buttons {

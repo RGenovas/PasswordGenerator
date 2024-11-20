@@ -25,7 +25,7 @@ body {
 
     margin:0 auto;
     padding:1em;
-    height:60vh;
+    height:70vh;
     width:80%;
     display:flex;
     align-items: center;
@@ -41,7 +41,11 @@ body {
         border-radius: 10px;
         text-align: center;
         
-
+    }
+    &_field {
+        width: 25vh;
+        border-radius:20px;
+        background-color: #ada6a6;
     }
    
 

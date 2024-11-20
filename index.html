@@ -15,19 +15,22 @@
     <div class="generator">
         <div class="guide">
             <ol>
-                <li>Select the number of letters, numbers and symbols</li>
-                <li>Press Generate</li>
-                <li>Copy your password using the copy button or generate a new one</li>
+                <li>Select the number of letters, numbers and symbols or add your own words.</li>
+                <li>Press Generate.</li>
+                <li>Copy your password using the copy button or generate a new one.</li>
             </ol>
         </div>
         <span id="totalChars"></span>
         <input name="textarea" id="pwText" class="generator_text"></input>
+ 
         <span class="generator_numbers">Number of letters: <span id="charNumber"></span></span>
-        <input type="range" id="chars" class="generator_field slider" min="4" max="16" value="4">  
+        <input type="range" id="chars" class="generator_field slider" min="4" max="16" value="3">  
         <span  class="generator_numbers">Number of symbols: <span id="charSymbol"></span></span>
-        <input type="range" id="symbols"  class="generator_field slider" min="2" max="16" value="2">
+        <input type="range" id="symbols"  class="generator_field slider" min="2" max="16" value="1">
         <span  class="generator_numbers">How many numbers: <span id="numberCount"></span> </span>
-        <input type="range" id="numbers"  class="generator_field slider" min="2" max="16" value="2">
+        <input type="range" id="numbers"  class="generator_field slider" min="2" max="16" value="1">
+        <span  class="generator_numbers">Add your own words:</span>
+        <input type="text" id="word" class="generator_field">
         <div class="buttons">
         <button class="buttons_btn" id="generate" class="generator_button">Generate</button>
         <button id="copy"  class="buttons_btn" onclick="copyPW()">Copy password</button>

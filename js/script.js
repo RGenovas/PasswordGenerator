@@ -1,7 +1,7 @@
 // Symbols and letters for generating
 
 let letters = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'];
-let symbols = ["@", '!', '?', '&', '*', '^', '<', '>','+','-'];
+let symbols = ['!', '?', '&', '^', '<', '>', '$'];
 
 // Dom elemenets in use
 let pw = document.getElementById('pwText');
@@ -9,6 +9,7 @@ let charNum = document.getElementById('charNumber')
 let charSymbol = document.getElementById('charSymbol')
 let numberCount = document.getElementById('numberCount')
 let totalSymbols = document.getElementById('totalChars')
+
 
 
 //Global vars for pw generating
@@ -19,9 +20,9 @@ let newPWN = [];
 let password = [];
 
 // Default values
-charNum.innerHTML = 4;
-charSymbol.innerHTML = 2;
-numberCount.innerHTML = 2;
+charNum.innerHTML = 3;
+charSymbol.innerHTML = 1;
+numberCount.innerHTML = 1;
 totalChars.innerHTML = 'Total symbols: '
 
 
@@ -45,14 +46,14 @@ document.getElementById('generate').addEventListener('click', () => {
     let charCount = document.getElementById('chars').value
     let symbCount =  document.getElementById('symbols').value
     let numCount =  document.getElementById('numbers').value
-    let pwCheck = Number(charCount) + Number(symbCount) +  Number(numCount)
-    console.log(pwCheck);
-    pwCheck < 8 ? alert('Make sure there are at least 8 symbols') : generatePw(charCount,symbCount,numCount)
+    let words = document.getElementById('word').value
+    let pwCheck = Number(charCount) + Number(symbCount) +  Number(numCount) + words.length
+    pwCheck < 8 ? alert('Make sure there are at least 8 symbols') : generatePw(charCount,symbCount,numCount,words)
     document.getElementById('totalChars').innerHTML = 'Total symbols: '+  pwCheck;
 })
 
 
-function generatePw(totals,symb,numbers) {
+function generatePw(totals,symb,numbers,word) {
     pw.value = ''
     let i = 0;
     let y = 0;
@@ -77,9 +78,10 @@ function generatePw(totals,symb,numbers) {
         newPWN.push(Math.floor(Math.random() * 99))
         z++
     }
+    
+    word.length > 0 ? newPW.push(word.replace(/\s+/g, '').replace(/,/g,'')) : ''
     password = newPW.concat(newPWS,newPWN).sort(() => Math.random() - 0.5)
-    console.log(password);
-    console.log(password.length);
+    
     pw.value = password.join('')
 
     // Resetting values
