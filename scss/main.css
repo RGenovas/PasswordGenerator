@@ -3,22 +3,42 @@ body {
   margin: 0;
   padding: 0;
   font-family: "Open sans", sans-serif;
+  color: #fff;
+  background-color: #666060;
 }
 
 .header {
   text-align: center;
 }
 
+.guide {
+  padding: 1em;
+}
+
 .generator {
+  margin: 0 auto;
+  padding: 1em;
   height: 60vh;
+  width: 80%;
   display: flex;
   align-items: center;
   justify-content: center;
+  background-color: #666060;
   flex-direction: column;
+  border-radius: 20px;
+  border: 2px solid #ccbfbf;
 }
 .generator_text {
-  width: 50vh;
+  width: 40%;
+  font-size: 16px;
+  height: 2em;
+  padding: 1em;
+  border-radius: 10px;
 }
 .generator_field {
   width: 30vh;
+}
+
+.buttons {
+  padding: 1em;
 }/*# sourceMappingURL=main.css.map */
