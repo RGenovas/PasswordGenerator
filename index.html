@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="scss/main.css">
+    <script src="js/script.js" defer></script>
+</head>
+<body>  
+    <div class="header">
+      <h1> Password Generator JS </h1> 
+    </div>
+    <div class="generator">
+        <span id="totalChars"></span>
+        <textarea name="textarea" id="pwText" class="generator_text"></textarea>
+        <span class="generator_numbers">Number of chars: <span id="charNumber"></span></span>
+        <input type="range" id="chars" class="generator_field slider" min="6" max="16" value="6">  
+        <span  class="generator_numbers">Number of symbols: <span id="charSymbol"></span></span>
+        <input type="range" id="symbols"  class="generator_field" min="2" max="16" value="2">
+        <span  class="generator_numbers">How many numbers: <span id="numberCount"></span> </span>
+        <input type="range" id="numbers"  class="generator_field" min="2" max="16" value="2">
+        <button class="gen_btn" id="generate" class="generator_button">Generate</button>
+      
+    </div>
+</body>
+</html>
